@@ -1,0 +1,181 @@
+##############################################
+#                                            #
+#                 LuckyEvent                 #
+#                                            #
+##############################################
+#This is a plugin that help you in held a Event for your Server.
+#All Right Reserved By ChooHan
+#You may edit the config but not the CODE 
+#Please do not change the Plugin Name but you can change Prefix! :) 
+#Thank you for your cooperation!
+
+# Plugin Prefix 
+# You can use the color codes with "&"
+Prefix: '&f[&6LuckyEvent&f]'
+
+GRows:
+- '&8-=[ &a&lx &8]=- &8[ &6<prefix> &8] -=[ &a&lx &8]=-'
+- ''
+- '  &e/le version &f- &7Check the current version'
+- '  &e/le reload &f- &7Reload the plugin'
+- '  &e/luckyhour &f- &7Get item hourly'
+- '  &e/luckykill &f- &7Get rewards for kills'
+- ''
+- '&8-=[ &a&lx &8]=- &8[ &6<prefix> &8] -=[ &a&lx &8]=-'
+
+##############################################
+#                                            #
+#           HourReward(Information)          #
+#                                            #
+##############################################
+# HourReward - It will give the player rewards every hour(s) that server online
+# This reward will been give out every Hour
+# Time started count since the moment that the server run
+# Stop until the server end
+
+
+##############################################
+#                                            #
+#          HourReward(Help Message)          #
+#                                            #
+##############################################
+
+#This allow you to change the message and information from "/luckydraw"
+#You can use color code for sure!
+#You can delete and make any lines you want ^_^
+#If you want to not use one set it as ''
+#You are now able to use & instead of the dumb symbol. ^_^
+
+#Example:
+#Rows:
+#- '&8-=[ &a&lx &8]=- &8[ &6<prefix> &8] -=[ &a&lx &8]=-'
+#- ''
+#- '  &e/lh version &f- &7Check the current version'
+#- '  &e/lh give &f- &7Force give the rewards'
+#- '  &e/lh reload &f- &7Reload the plugin'
+#- ''
+#- '&8-=[ &a&lx &8]=- &8[ &6<prefix> &8] -=[ &a&lx &8]=-'
+
+HPrefix: '&f[&6HourlyReward&f] '
+
+#<hprefix> - This HourlyReward Prefix
+#<player> - The sender name
+Rows:
+- '&8-=[ &a&lx &8]=- &8[ &6<prefix> &8] -=[ &a&lx &8]=-'
+- ''
+- '  &e/lh give &f- &7Force give the rewards'
+- '  &e/lh giveall &f- &7Force give the rewards'
+- ''
+- '&8-=[ &a&lx &8]=- &8[ &6<prefix> &8] -=[ &a&lx &8]=-'
+
+
+
+##############################################
+#                                            #
+#           HourReward(Reward CMD)           #
+#                                            #
+##############################################
+# What reward should they get with commands!
+# Commands is randomly choosed one!
+# The CMD is run by the Console!
+# <Player> - The sender name!
+CMD:
+- 'give <player> stone 10'
+- 'give <player> grass 10'
+
+
+##############################################
+#                                            #
+#           KillReward(Reward CMD)           #
+#                                            #
+##############################################
+# KillReward let you to get reward for your kills!
+# KillReward is not auto gived!
+# KillReward can been claimed once the player get 10 kills!
+KPrefix: '&f[&4KillReward&f] '
+
+
+# What reward should they get with commands!
+# Commands is randomly choosed one!
+# The CMD is run by the Console!
+# <Player> - The sender name!
+KillMonsterRewardCMD:
+- 'eco give <player> 1000'
+- 'give <player> diamond 5'
+
+KillPlayerRewardCMD:
+- 'eco give <player> 2000'
+- 'give <player> diamond 10'
+
+# Message for /lk stats
+KillCountMSG:
+- '&aYou have killed &e&l<pnumber> &aplayers! '
+- '&aYou have killed &e&l<mnumber> &amonsters! ' 
+
+# Message when player didnt reach the kill target
+GetPlayerReward(Error):
+- '&aYou havent have &e&l10 &aPlayer kills!' 
+- '&aYou have killed &e&l<pnumber> &aplayers! '
+GetMonsterReward(Error):
+- '&aYou havent have &e&l10 &aMonster kills!' 
+- '&aYou have killed &e&l<mnumber> &amonsters! '
+
+
+# Help Message
+KillRows:
+- '&8-=[ &a&lx &8]=- &8[ &6<prefix> &8] -=[ &a&lx &8]=-'
+- ''
+- '  &e/lk stats &f- &7Check your kill stats'
+- '  &e/lk prewards &f- &7Get the Rewards'
+- '  &e/lk krewards &f- &7Get the Rewards'
+- ''
+- '&8-=[ &a&lx &8]=- &8[ &6<prefix> &8] -=[ &a&lx &8]=-'
+##############################################
+#                                            #
+#                 Election                   #
+#                                            #
+##############################################
+EPrefix: '&f[&9&lElection&f] '
+
+ERows:
+- '&8-=[ &a&lx &8]=- &8[ &6<prefix> &8] -=[ &a&lx &8]=-'
+- ''
+- '  &e/el add &f- &7Add an elector'
+- '  &e/el choose &f- &7Choose a elector you like'
+- '  &e/el list &f- &7List the elector'
+- ''
+- '&8-=[ &a&lx &8]=- &8[ &6<prefix> &8] -=[ &a&lx &8]=-'
+
+electionadd: 
+- '&4&lPlease try again with /election add <name>&r'
+electionchoose: 
+- '&4&lPlease try again with /election choose <name>&r'
+electionchoosefail:
+- '&4&lName already exists !&r'
+electionchooseempty: 
+- '&4&lPlease try again with /election choose <name>&r'
+electionchoosed: 
+- '&a&lAdded!&r'
+electionalreadychoose: 
+- '&4&lYou had choosed the elector you like!&r'
+
+
+##############################################
+#                                            #
+#                 Exchanger                  #
+#                                            #
+##############################################
+exprefix: '&f[&9&lExchanger&f] '
+
+EXRewards:
+- 'give <player> 1'
+- 'give <player> 2'
+
+exchangerair:
+- 'You must holding a item to exchange'
+
+exchangerdelay:
+- '&bYou cant use that commands for another &e&l<minutes> &bminutes!'
+
+exchangerdone:
+- '&fYou succesfully exchange your item'
